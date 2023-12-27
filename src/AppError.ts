@@ -5,14 +5,14 @@ export enum ResponseCode {
   UNAUTHORIZED = 401,
   NOT_FOUND = 404,
   INTERNAL_SERVER_ERROR = 500,
-};
-  
-interface AppErrorArgs {
+}
+
+export interface AppErrorArgs {
   name?: string;
   code: ResponseCode;
   description: string;
-};
-    
+}
+
 export class AppError extends Error {
   public readonly name: string;
   public readonly code: ResponseCode;
